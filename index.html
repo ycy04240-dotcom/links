@@ -198,6 +198,11 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-of
 .plan td.pk{background:var(--pink-bg)}
 .plan td .g{color:var(--mut)}
 .plan td.off{background:var(--off)}
+/* 표 바깥 가장자리 테두리 제거 (안쪽 격자선만 유지) */
+.plan thead th{border-top:none}
+.plan tr>:first-child{border-left:none}
+.plan tr>:last-child{border-right:none}
+.plan tbody tr:last-child>th,.plan tbody tr:last-child>td{border-bottom:none}
 
 /* ── 공휴일 목록 ─────────────────────────── */
 .holsec{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
