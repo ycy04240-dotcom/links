@@ -116,13 +116,12 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-of
 .cell .hname{display:block;font-size:9px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 1px}
 .cell .hname b{font-weight:600}
 .lb-hol{color:var(--red)}
-.lb-term{color:var(--blue)}
-.lb-memo{color:var(--mut)}
-.lb-sesi{color:var(--acc)}
-.cell.sun .num,.cell.hol .num,.cell.sub .num{color:var(--red)}
+.lb-term{color:var(--ink)}
+.lb-memo{color:var(--ink)}
+.lb-sesi{color:var(--ink)}
 .cell.sat .num{color:var(--blue)}
-.cell.hol{background:var(--red-bg)}
-.cell.sub{border-color:var(--red);border-style:dashed}
+.cell.sun .num,.cell.hol .num,.cell.sub .num{color:var(--red)}
+.cell.hol,.cell.sub{background:var(--red-bg)}
 .cell.today{box-shadow:inset 0 0 0 2px var(--acc)}
 
 /* ── 한 달씩 보기 ─────────────────────────── */
@@ -169,23 +168,23 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-of
 @media (max-width:560px){.year-grid.acal-wrap{grid-template-columns:1fr}}
 .acal{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 16px 18px}
 .acal-num{
-  font-size:38px;font-weight:300;color:var(--mut);line-height:1.1;
+  font-size:39px;font-weight:300;color:var(--mut);line-height:1.1;
   font-variant-numeric:tabular-nums;text-align:center;margin-bottom:6px;
 }
 .acal-dow{
   display:grid;grid-template-columns:repeat(7,1fr);text-align:center;
-  font-size:12px;letter-spacing:.12em;color:var(--mut);margin:4px 0 2px;
+  font-size:13px;letter-spacing:.12em;color:var(--mut);margin:4px 0 2px;
 }
 .acal-dow .a-sun{color:var(--pink)}
 .acal-days{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}
-.acal-days .ac{padding:6px 0;font-size:14px;color:var(--mut);font-variant-numeric:tabular-nums}
+.acal-days .ac{padding:6px 0;font-size:15px;color:var(--mut);font-variant-numeric:tabular-nums}
 .acal-days .ac b{font-weight:550}
 .acal-days .ac b.pkd{color:var(--pink)}
 .acal-days .dsl{font-style:normal;color:var(--line);padding:0 1px}
-.acal-days .ac .da{font-size:11px;vertical-align:top}
-.acal-days .ac .db{font-size:11px;vertical-align:bottom}
+.acal-days .ac .da{font-size:12px;vertical-align:top}
+.acal-days .ac .db{font-size:12px;vertical-align:bottom}
 .acal-list{margin-top:12px;display:flex;flex-direction:column;gap:5px;padding:0 8px;min-height:20px}
-.acal-item{display:flex;gap:14px;font-size:13px;align-items:baseline;font-weight:550}
+.acal-item{display:flex;gap:14px;font-size:14px;align-items:baseline;font-weight:550}
 .acal-item .ad{min-width:38px;font-variant-numeric:tabular-nums}
 .pinktxt{color:var(--pink)}
 .graytxt{color:var(--mut)}
@@ -210,11 +209,11 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-of
 /* ── 한 달씩 보기: 양옆 이전/다음 달 미니 달력 ── */
 .month.mini{padding:14px 12px 16px;cursor:pointer;opacity:.72;margin-top:52px}
 .month.mini:hover{opacity:1;border-color:var(--acc)}
-.mini .mname{font-size:13.5px;margin:0 0 8px 2px;color:var(--mut);font-weight:600}
-.mini .dowrow span{font-size:9.5px;padding:2px 0 6px}
+.mini .mname{font-size:14.5px;margin:0 0 8px 2px;color:var(--mut);font-weight:600}
+.mini .dowrow span{font-size:10.5px;padding:2px 0 6px}
 .single .mini .days{gap:2px}
 .single .mini .cell{min-height:0;padding:7px 0;border-radius:5px}
-.single .mini .cell .num{font-size:11.5px;font-weight:500;line-height:1.2}
+.single .mini .cell .num{font-size:12.5px;font-weight:500;line-height:1.2}
 @media (max-width:980px){
   .year-grid.single{grid-template-columns:minmax(0,660px)}
   .month.mini{display:none}
@@ -305,7 +304,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-of
     <p>· 음력: 한국천문연구원(KASI) 기준 음양력 데이터(1000~2050년) 사용 — 설날·부처님오신날·추석은 음력에서 자동 계산됩니다.</p>
     <p>· 대체 휴일: 현행 규정 기준 자동 계산 — 설날·추석 연휴는 <b>일요일</b>과 겹칠 때, 그 외(3·1절, 어린이날, 부처님오신날, 광복절, 개천절, 한글날, 크리스마스, 노동절, 제헌절)는 <b>토·일요일 또는 다른 공휴일</b>과 겹칠 때 다음 평일이 대체 휴일이 됩니다. 제도 시행 전 연도(설·추석·어린이날 2014년~, 4대 국경일 2021년~, 부처님오신날·크리스마스 2023년~)에는 표시하지 않습니다.</p>
     <p>· 노동절(5/1)·제헌절(7/17)은 2026년 공휴일법 개정에 따라 2026년부터 공휴일·대체 휴일 대상으로 반영했습니다. 제헌절은 과거 공휴일이었던 1950~2007년에도 표시됩니다.</p>
-    <p>· "공휴일" 카테고리 하나에 공휴일(빨강)·대체 휴일(빨간 점선)·투표일(빨강)·절기(파랑)·기념일(회색)·삼복·정월대보름(초록)이 모두 포함됩니다.</p>
+    <p>· "공휴일" 카테고리 하나에 공휴일(빨강)·대체 휴일(빨간 점선)·투표일(빨강)·절기·기념일·삼복·정월대보름이 모두 포함됩니다. 실제로 쉬는 날(공휴일·대체 휴일·투표일)만 빨간색으로 표시하고, 그 외 절기·기념일·삼복·정월대보름은 검정색으로 표시합니다.</p>
     <p>· "연간달력"·"연간계획" 보기는 신정, 설날(연휴 포함), 삼일절, 대체 휴일, 노동절, 어린이날, 어버이날, 스승의 날, 부처님 오신 날, 현충일, 6·25전쟁일, 제헌절, 광복절, 추석(연휴 포함), 국군의 날, 개천절, 한글날, 크리스마스와 투표일만 표시합니다.</p>
     <p>· 투표일: 2000년 이후 실시된 전국 단위 선거일(대통령·국회의원·지방선거)과 확정된 2026 지방선거(6/3)·2028 국회의원선거(4/12)를 반영했습니다. 재·보궐선거와 정부 지정 임시공휴일은 포함되지 않습니다.</p>
     <p>· 24절기는 태양 황경(15° 간격) 천문 계산·한국시(KST) 기준으로 표시하며, 2026~2027년 값은 월력요항과 대조 검증했습니다. 자정 부근에 걸리는 해에는 ±1일 차이가 날 수 있습니다.</p>
@@ -1942,18 +1941,21 @@ function buildPlan(grid, Y, bySer, subMap, memoMap) {
   const box = document.createElement('div');
   box.className = 'plan';
   let h = '<table><thead><tr><th class="pd"></th>';
-  for (let mm = 1; mm <= 12; mm++) h += '<th>' + mm + ' ' + ENG[mm] + '</th>';
+  for (let mm = 1; mm <= 12; mm++) { h += '<th>' + mm + ' ' + ENG[mm] + '</th>'; if (mm === 6) h += '<th class="pd"></th>'; }
   h += '<th class="pd"></th></tr></thead><tbody>';
   for (let d = 1; d <= 31; d++) {
     h += '<tr><th class="pd">' + d + '</th>';
     for (let mm = 1; mm <= 12; mm++) {
       const dim = new Date(Date.UTC(Y, mm, 0)).getUTCDate();
-      if (d > dim) { h += '<td class="off"></td>'; continue; }
-      const sr = ser(Y, mm, d);
-      const items = annualCellItems(sr, bySer, subMap, memoMap);
-      const pink = fromSer(sr).w === 0 || items.some(x => x.c === 'p');
-      const lbl = items.map(x => '<span' + (x.c === 'g' ? ' class="g"' : '') + '>' + x.n + '</span>').join(' ');
-      h += '<td class="' + (pink ? 'pk' : '') + '" title="' + Y + '.' + mm + '.' + d + '">' + lbl + '</td>';
+      if (d > dim) { h += '<td class="off"></td>'; }
+      else {
+        const sr = ser(Y, mm, d);
+        const items = annualCellItems(sr, bySer, subMap, memoMap);
+        const pink = fromSer(sr).w === 0 || items.some(x => x.c === 'p');
+        const lbl = items.map(x => '<span' + (x.c === 'g' ? ' class="g"' : '') + '>' + x.n + '</span>').join(' ');
+        h += '<td class="' + (pink ? 'pk' : '') + '" title="' + Y + '.' + mm + '.' + d + '">' + lbl + '</td>';
+      }
+      if (mm === 6) h += '<th class="pd">' + d + '</th>';
     }
     h += '<th class="pd">' + d + '</th></tr>';
   }
@@ -2095,7 +2097,7 @@ function render() {
       }
       const se = sesiMap.get(s), tm = termMap.get(s), mo = memoMap.get(s);
       const parts = [];
-      hols.forEach(x => parts.push('<b class="lb-hol">' + x.name + '</b>'));
+      hols.forEach(x => { if (!x.name.includes('연휴')) parts.push('<b class="lb-hol">' + x.name + '</b>'); });
       if (subSrc !== undefined) parts.push('<b class="lb-hol">대체 휴일</b>');
       if (mode === 'all' && se) parts.push('<b class="lb-sesi">' + se + '</b>');
       if (mode === 'all' && tm) parts.push('<b class="lb-term">' + tm + '</b>');
